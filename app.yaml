@@ -1,0 +1,30 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: base64:MCi3Bbhaw0/KK8nAaVkCalpwSjIKA38n1HKiVhtR7h4=
+  STORAGE_DIR: /tmp
+  #CACHE_DRIVER: database
+  #SESSION_DRIVER: database
+  ## Set these environment variables according to your CloudSQL configuration.
+  #DB_CONNECTION:mysql
+  #DB_HOST: localhost
+  #DB_PORT: 3306
+  #DB_DATABASE: soquestoes2
+  #DB_USERNAME: rlogon
+  #DB_PASSWORD: UTI09tyv
+  #DB_SOCKET: "/cloudsql/soquestoes-220817:southamerica-east1:soquestoes"
+
+beta_settings:
+    # for Cloud SQL, set this value to the Cloud SQL connection name,
+    # e.g. "project:region:cloudsql-instance"
+    cloud_sql_instances: "soquestoes-220817:southamerica-east1:soquestoes"
